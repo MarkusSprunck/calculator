@@ -31,8 +31,8 @@ public class Calculator {
             String[] values = calculation.trim().replace("  ", " ").split(" ");
             if (values.length == 3) {
                 try {
-                    dataModel.setOperator(Operators.getFromString(values[0]));
-                    dataModel.setNumberOne(values[1]);
+                    dataModel.setOperator(Operators.getFromString(values[1]));
+                    dataModel.setNumberOne(values[0]);
                     dataModel.setNumberTwo(values[2]);
                 } catch (IllegalArgumentException ignored) {
                     // nothing to do
