@@ -57,6 +57,6 @@ public class Calculator {
         if (dataModel.getNumberTwo() == 0) {
             return "ERROR";
         }
-        return String.format(Locale.UK,"%.3f", (double) dataModel.getNumberOne() / dataModel.getNumberTwo());
+        return String.format(Locale.UK, "%.3f", (double) dataModel.getNumberOne() / dataModel.getNumberTwo());
     }
 }

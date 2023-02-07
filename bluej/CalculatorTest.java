@@ -1,6 +1,7 @@
 
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,39 +9,35 @@ import org.junit.jupiter.api.Test;
 /**
  * Die Test-Klasse CalculatorTest.
  *
- * @author  (Ihr Name)
+ * @author (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class CalculatorTest
-{
+public class CalculatorTest {
     /**
      * Konstruktor fuer die Test-Klasse CalculatorTest
      */
-    public CalculatorTest()
-    {
+    public CalculatorTest() {
     }
 
     /**
-     *  Setzt das Testgerüst fuer den Test.
-     *
+     * Setzt das Testgerüst fuer den Test.
+     * <p>
      * Wird vor jeder Testfall-Methode aufgerufen.
      */
     @BeforeEach
-    public void setUp()
-    {
+    public void setUp() {
     }
 
     /**
      * Gibt das Testgerüst wieder frei.
-     *
+     * <p>
      * Wird nach jeder Testfall-Methode aufgerufen.
      */
     @AfterEach
-    public void tearDown()
-    {
+    public void tearDown() {
     }
-    
-     @Test
+
+    @Test
     public void testAdditionValid() {
         String calculation = "1 + 5";
 

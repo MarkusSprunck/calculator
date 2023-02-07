@@ -1,3 +1,7 @@
 # Project exclude paths
 /target/
 /.idea/
+/bluej/*.ctxt
+/bluej/*.class
+/bluej/Calculator.class
+/bluej/package.bluej

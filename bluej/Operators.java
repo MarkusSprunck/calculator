@@ -8,13 +8,13 @@ public enum Operators {
 
     private final String operator;
 
-    Operators(String operator){
+    Operators(String operator) {
         this.operator = operator;
     }
 
-    public static Operators getFromString(String symbol){
-        for (Operators value : Operators.values()){
-            if (value.operator.equals(symbol)){
+    public static Operators getFromString(String symbol) {
+        for (Operators value : Operators.values()) {
+            if (value.operator.equals(symbol)) {
                 return value;
             }
         }
