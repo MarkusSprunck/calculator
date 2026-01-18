@@ -1,6 +1,6 @@
 ## Task
 
-Write a simple calculator with a TDD approach. Available time is 60 minutes.
+Write a simple calculator with a Test Driven Development approach. Available time is 60 minutes.
 
 #### 1) Create Class Calculator 
 
@@ -53,10 +53,6 @@ public class Calculator {
        Output: ERROR
 
 
-
-
-
-
 ### Build and Test
 
 ```shell
@@ -68,48 +64,47 @@ Expected result:
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] -----------------------< org.example:Calculator >-----------------------
-[INFO] Building Calculator 1.0-SNAPSHOT
+[INFO] Building Calculator 2.0
+[INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Calculator ---
-[INFO] Deleting /Users/markus/IdeaProjects/private/calculator/target
+[INFO] --- clean:3.2.0:clean (default-clean) @ Calculator ---
+[INFO] Deleting /Users/markus/Projects/github/calculator/target
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Calculator ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/markus/IdeaProjects/private/calculator/src/main/resources
+[INFO] --- resources:3.3.1:resources (default-resources) @ Calculator ---
+[INFO] skip non existing resourceDirectory /Users/markus/Projects/github/calculator/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Calculator ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 3 source files to /Users/markus/IdeaProjects/private/calculator/target/classes
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Calculator ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug release 21] to target/classes
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Calculator ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/markus/IdeaProjects/private/calculator/src/test/resources
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Calculator ---
+[INFO] skip non existing resourceDirectory /Users/markus/Projects/github/calculator/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Calculator ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /Users/markus/IdeaProjects/private/calculator/target/test-classes
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ Calculator ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21] to target/test-classes
 [INFO] 
-[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Calculator ---
-[INFO] Surefire report directory: /Users/markus/IdeaProjects/private/calculator/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running calculator.CalculatorTest
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec
-
-Results :
-
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
-
+[INFO] --- surefire:3.5.4:test (default-test) @ Calculator ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
 [INFO] 
-[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ Calculator ---
-[INFO] Building jar: /Users/markus/IdeaProjects/private/calculator/target/Calculator-1.0-SNAPSHOT.jar
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running calculator.CalculatorTest
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 s -- in calculator.CalculatorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ Calculator ---
+[INFO] Building jar: /Users/markus/Projects/github/calculator/target/Calculator-2.0.jar
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.178 s
-[INFO] Finished at: 2023-02-07T08:35:53+01:00
+[INFO] Total time:  2.565 s
+[INFO] Finished at: 2026-01-18T10:57:09+01:00
 [INFO] ------------------------------------------------------------------------
 ```

@@ -1,8 +1,8 @@
 package calculator;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTest {
 
@@ -197,9 +197,8 @@ public class CalculatorTest {
 
     @Test
     public void testInvalidNull() {
-        String calculation = null;
 
-        String result = Calculator.run(calculation);
+        String result = Calculator.run(null);
 
         assertEquals("INVALID_INPUT", result);
     }
