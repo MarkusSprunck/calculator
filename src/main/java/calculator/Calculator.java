@@ -15,14 +15,12 @@ public class Calculator {
     }
 
     private static String calculate(DataModel dataModel) {
-        String result = INVALID_INPUT;
-        switch (dataModel.getOperator()) {
-            case ADD -> result = addition(dataModel);
-            case SUB -> result = subtraction(dataModel);
-            case MULT -> result = multiplication(dataModel);
-            case DIV -> result = division(dataModel);
-        }
-        return result;
+        return switch (dataModel.getOperator()) {
+            case ADD -> addition(dataModel);
+            case SUB -> subtraction(dataModel);
+            case MULT -> multiplication(dataModel);
+            case DIV -> division(dataModel);
+        };
     }
 
     private static DataModel parse(String calculation) {
@@ -31,7 +29,7 @@ public class Calculator {
             String[] values = calculation.trim().replace("  ", " ").split(" ");
             if (values.length == 3) {
                 try {
-                    dataModel.setOperator(Operators.getFromString(values[1]));
+                    dataModel.setOperator(Operators.fromString(values[1]));
                     dataModel.setNumberOne(values[0]);
                     dataModel.setNumberTwo(values[2]);
                 } catch (IllegalArgumentException ignored) {

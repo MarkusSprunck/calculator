@@ -4,8 +4,7 @@ public enum Operators {
     ADD("+"),
     SUB("-"),
     MULT("*"),
-    DIV("/"),
-    DEFAULT("DEFAULT");
+    DIV("/");
 
     private final String operator;
 
@@ -13,12 +12,12 @@ public enum Operators {
         this.operator = operator;
     }
 
-    public static Operators getFromString(String symbol){
-        for (Operators value : Operators.values()){
-            if (value.operator.equals(symbol)){
-                return value;
+    public static Operators fromString(String symbol){
+        for (Operators operator : Operators.values()){
+            if (operator.operator.equals(symbol)){
+                return operator;
             }
         }
-        return Operators.DEFAULT;
+        return null;
     }
 }
