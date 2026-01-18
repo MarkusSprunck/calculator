@@ -1,17 +1,15 @@
 package calculator;
 
 import java.util.Locale;
+import java.util.Optional;
 
 public class Calculator {
 
-    public static final String INVALID_INPUT = "INVALID_INPUT";
-
-    public static String run(String calculation) {
-        DataModel dataModel = parse(calculation);
-        if (dataModel.isValid()) {
-            return calculate(dataModel);
-        }
-        return INVALID_INPUT;
+    public static String run(String input) {
+        return parse(input)
+                .filter(DataModel::isValid)
+                .map(Calculator::calculate)
+                .orElse("INVALID_INPUT");
     }
 
     private static String calculate(DataModel dataModel) {
@@ -23,7 +21,7 @@ public class Calculator {
         };
     }
 
-    private static DataModel parse(String calculation) {
+    private static Optional<DataModel> parse(String calculation) {
         DataModel dataModel = new DataModel();
         if (calculation != null) {
             String[] values = calculation.trim().replace("  ", " ").split(" ");
@@ -37,7 +35,7 @@ public class Calculator {
                 }
             }
         }
-        return dataModel;
+        return Optional.of(dataModel);
     }
 
     private static String addition(DataModel dataModel) {

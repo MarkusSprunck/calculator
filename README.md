@@ -9,9 +9,8 @@ public class Calculator {
 
     public static final String INVALID_INPUT = "INVALID_INPUT";
 
-    public static String run(String calculation) {
+    public static String run(String input) {
         //TODO: place implementation here
-        return INVALID_INPUT;
     }
 }    
 ```
